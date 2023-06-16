@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playlist Comparison Results</title>
+    <link rel="stylesheet" type="text/css" href="static/css/results.css">
+</head>
+<body>
+<ul class="list">
+<h1 class="title">Comparison Results</h1>
+    <h2 class="subtitle1">Playlist 1: {{ playlist1 }}</h2>
+    <h2 class="subtitle2">Playlist 2: {{ playlist2 }}</h2>
+    <h3 class="subtitle3">Common Tracks:</h3>
+    <ul>
+        {% for track in common_tracks %}
+        <li>{{ track }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back Home</a>
+</ul>
+    
+</body>
+</html>
