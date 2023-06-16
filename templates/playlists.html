@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Playlists</title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+<body>
+    <h1>Select Playlists</h1>
+    <form action="/results" method="post">
+        <h2>Playlist 1</h2>
+        <select name="playlist1">
+            {% for playlist_id, playlist_name in playlists1 %}
+            <option value="{{ playlist_id }}">{{ playlist_name }}</option>
+            {% endfor %}
+        </select>
+        <h2>Playlist 2</h2>
+        <select name="playlist2">
+            {% for playlist_id, playlist_name in playlists2 %}
+            <option value="{{ playlist_id }}">{{ playlist_name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Compare Playlists">
+    </form>
+    <a href="/">Go Back Home</a>
+</body>
+</html>
